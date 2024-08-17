@@ -16,9 +16,7 @@ function playGame() {
     humanChoice = humanChoice.toLowerCase();
     if (humanChoice === computerChoice) {
       return "It's a tie!";
-    }
-
-    if (
+    } else if (
       (humanChoice === "rock" && computerChoice === "scissors") ||
       (humanChoice === "paper" && computerChoice === "rock") ||
       (humanChoice === "scissors" && computerChoice === "paper")
@@ -31,7 +29,7 @@ function playGame() {
     }
   }
 
-  // Spela 5 rundor
+  // play 5 rounds of rock, paper, scissors and declare winner after 5 rounds
   console.log("Round 1:");
   const humanChoice1 = getHumanChoice();
   const computerChoice1 = getComputerChoice();
@@ -57,7 +55,7 @@ function playGame() {
   const computerChoice5 = getComputerChoice();
   console.log(playRound(humanChoice5, computerChoice5));
 
-  // Visa slutpoäng och deklarera vinnare
+  // Show us the final score and declare the winner
   console.log(`Final Scores: Human: ${humanScore}, Computer: ${computerScore}`);
 
   if (humanScore > computerScore) {
@@ -69,5 +67,5 @@ function playGame() {
   }
 }
 
-// Kör spelet
+// Initiate the game
 playGame();

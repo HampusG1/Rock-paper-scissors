@@ -1,17 +1,20 @@
+// Create a function for the computer to choose rock, paper or scissors
 function getComputerChoice() {
   const computerChoices = ["rock", "paper", "scissors"];
   return computerChoices[Math.floor(Math.random() * computerChoices.length)];
 }
 
+// Create a function for the human input of rock, paper or scissors
 function getHumanChoice() {
   const humanChoice = ["rock", "paper", "scissors"];
   return prompt("Choose Rock, Paper or Scissors").toLowerCase();
 }
-
+// Create a function to play the game
 function playGame() {
   let humanScore = 0;
   let computerScore = 0;
 
+  // Create a function to play a round of rock, paper, scissors
   function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
     if (humanChoice === computerChoice) {
@@ -28,6 +31,7 @@ function playGame() {
       return "You lose!";
     }
   }
+
 
   // play 5 rounds of rock, paper, scissors and declare winner after 5 rounds
   console.log("Round 1:");
